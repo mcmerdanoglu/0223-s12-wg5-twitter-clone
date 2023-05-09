@@ -1,6 +1,8 @@
 import "./App.css";
 import { NavLink, Switch, Route } from "react-router-dom";
 import SignUp from "./forms/SignUp";
+import Cards from "./components/Cards";
+import InputReader from "./components/InputReader";
 
 function App() {
   return (
