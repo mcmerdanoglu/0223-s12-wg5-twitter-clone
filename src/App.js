@@ -44,3 +44,5 @@ function App() {
 		</TokenProvider>
 	);
 }
+
+export default App;

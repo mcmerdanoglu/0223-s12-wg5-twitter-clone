@@ -1,20 +1,22 @@
-import "./App.css";
-import { Route, Routes, NavLink } from "react-router-dom";
-import { Login } from "./components/Login";
-import { TokenProvider } from "./context/TokenProvider";
+import { createContext, useState } from "react";
 
-function App() {
+const TokenContext = createContext();
+
+function TokenProvider(props) {
+	const token = localStorage.getItem("token");
+	const [loggedIn, setLoggedIn] = useState(false);
+
 	return (
-		<TokenProvider>
-			<div className="App">
-				<Routes>
-					<Route exact path="/" />
-				</Routes>
-
-				<NavLink path="/Login" element={Login} LOGIN />
-			</div>
-		</TokenProvider>
+		<TokenContext.Provider
+			value={{
+				token,
+				loggedIn,
+				setLoggedIn,
+			}}
+		>
+			{props.children}
+		</TokenContext.Provider>
 	);
 }
 
-export default App;
+export { TokenContext, TokenProvider };
