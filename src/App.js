@@ -30,7 +30,7 @@ function App() {
           <Route path="/kayit-ol">
             <SignUp />
           </Route>
-          {/* <PrivateRoute path="/profilim">profilim</PrivateRoute> */}
+          {/* <PrivateRoute path="/profilim">profilim</PrivateRoute> SignIn öncesi bu şekilde olması gerekir*/}
           <Route path="/profilim">profilim</Route>
         </Switch>
       </main>
