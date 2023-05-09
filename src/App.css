@@ -1,15 +1,15 @@
 .auth-form input {
-  @apply border-b-2 border-dotted border-purple-700  text-sm py-1 px-1.5 w-full;
+	@apply border-b-2 border-dotted border-purple-700  text-sm py-1 px-1.5 w-full;
 }
 
 .auth-form .form-line {
-  @apply mt-3;
+	@apply mt-3;
 }
 
 .auth-form .form-label {
-  @apply py-1 block;
+	@apply py-1 block;
 }
 
 button {
-  @apply bg-black text-white px-4 py-2 rounded font-medium;
+	@apply bg-black text-white px-4 py-2 rounded font-medium;
 }
