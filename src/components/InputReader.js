@@ -9,7 +9,7 @@ export default function InputReader() {
 	const [newTweet, setNewTweet] = useState({
 		body: "",
 	});
-	const navigate = useNavigate();
+
 	function handleChange(event) {
 		setNewTweet({
 			...newTweet,
@@ -17,21 +17,20 @@ export default function InputReader() {
 		});
 	}
 	function handleSubmit(event) {
-		console.log("hey man");
+		console.log("hey man", token);
 		event.preventDefault();
 		const config = {
 			method: "post",
-			url: "https://wit-courses-api2.onrender.com/entries",
+			url: "https://wit-courses-api2.onrender.com/pub/entries",
 			headers: {
 				"Content-Type": "application/json",
 				Authorization: token,
 			},
-			data: JSON.stringify(newTweet),
+			data: newTweet,
 		};
 		axios(config)
 			.then((response) => {
 				console.log("response", response);
-				navigate("/");
 			})
 			.catch((error) => console.log(error));
 	}

@@ -5,6 +5,7 @@ import InputReader from "./InputReader";
 
 export default function Home() {
 	const { token } = useContext(TokenContext);
+	console.log("tioken", token);
 	const [data, setData] = useState([]);
 
 	useEffect(() => {

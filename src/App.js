@@ -57,6 +57,7 @@
 import "./App.css";
 import Login from "./components/Login";
 import Home from "./components/Home";
+import SignUp from "./components/SignUp";
 import { TokenProvider } from "./context/TokenProvider";
 import { Route, Routes } from "react-router-dom";
 
@@ -67,7 +68,8 @@ function App() {
 				{/* <Login /> */}
 				{/* <Home /> */}
 				<Routes>
-					<Route path="/" element={<Login />} />
+					<Route path="/login" element={<Login />} />
+					<Route path="/" element={<SignUp />} />
 					<Route path="/home" element={<Home />} />{" "}
 				</Routes>
 			</div>
