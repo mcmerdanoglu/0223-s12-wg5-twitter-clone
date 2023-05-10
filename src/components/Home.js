@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { TokenContext } from "../context/TokenProvider";
 import axios from "axios";
 import InputReader from "./InputReader";
-
+import Cards from "./Cards";
 export default function Home() {
 	const { token } = useContext(TokenContext);
 	console.log("tioken", token);
@@ -19,5 +19,8 @@ export default function Home() {
 			.catch((error) => console.log(error));
 	}, []);
 
-	return <h1>{<InputReader />}</h1>;
+	return <div>
+		<h1>{<InputReader />}</h1>
+		<h1>{<Cards />}</h1>
+		</div>;
 }

@@ -26,7 +26,7 @@ export default function Login() {
 				if (res.status === 200) {
 					localStorage.setItem("token", res.data.token);
 					console.log(res.data.token);
-					navigate("home");
+					navigate('/home');
 				}
 			})
 			.catch((error) => console.log(error.response));
